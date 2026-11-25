@@ -1,0 +1,99 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build (base path /mochi-site/ for GitHub Pages project site)
+        run: npx vite build --base=/mochi-site/
+
+      # O site usa links de navegação absolutos no HTML-fonte (ex: href="/cases/"),
+      # que o Vite não reescreve (só reescreve assets/scripts que ele processa).
+      # Em GitHub Pages de projeto (servido em /mochi-site/), esses links quebrariam.
+      # Este passo corrige isso só no artefato final de build, sem tocar no
+      # código-fonte do repositório.
+      - name: Fix absolute internal navigation links for the /mochi-site/ subpath
+        run: |
+          node <<'NODE'
+          const fs = require('fs');
+          const path = require('path');
+
+          const base = '/mochi-site';
+          const root = 'dist';
+
+          // Rotas internas conhecidas do site (hrefs absolutos literais no HTML-fonte)
+          const routes = ['/', '/cases/', '/cases/azevedo-beauty/', '/cases/criativi-concept/',
+            '/cases/koyfer/', '/cases/turbo-tintas/', '/metodo/', '/metodo/satori/',
+            '/proposta/', '/contato/'];
+
+          function walk(dir) {
+            for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+              const p = path.join(dir, entry.name);
+              if (entry.isDirectory()) { walk(p); continue; }
+              if (!entry.name.endsWith('.html')) continue;
+
+              let html = fs.readFileSync(p, 'utf8');
+              let changed = false;
+              for (const route of routes) {
+                const needle = `href="${route}"`;
+                if (route === '/') {
+                  // só reescreve href="/" (home), nunca prefixos já corretos
+                  const re = /href="\/"/g;
+                  const next = html.replace(re, `href="${base}/"`);
+                  if (next !== html) { html = next; changed = true; }
+                } else {
+                  if (html.includes(needle)) {
+                    html = html.split(needle).join(`href="${base}${route}"`);
+                    changed = true;
+                  }
+                }
+              }
+              if (changed) fs.writeFileSync(p, html);
+            }
+          }
+
+          walk(root);
+          console.log('Correção de links internos aplicada em dist/.');
+          NODE
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
