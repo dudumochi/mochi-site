@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mochi Brothers · A referência não compete</title>
+  <meta name="description" content="Mochi Brothers — a arte de construir o natural com a inteligência digital." />
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+<body class="is-loading">
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- MENU MOBILE (Figma 10 / Menu · Mobile) -->
+  <div class="menu" id="menu" aria-hidden="true" inert>
+    <nav class="menu__list" aria-label="Menu principal">
+      <a href="#topo" data-menu-link><span>Início</span></a>
+      <a href="/cases/" data-menu-link><span>Cases</span></a>
+      <a href="/metodo/" data-menu-link><span>O método</span></a>
+      <a href="/proposta/" data-menu-link><span>Sua proposta</span></a>
+      <a href="#contato" data-menu-link><span>Contato</span></a>
+    </nav>
+    <div class="menu__langs" aria-label="Idiomas (em breve)"><span>BR</span><span>EN</span><span>ES</span><span>FR</span></div>
+    <div class="menu__prefs"><button type="button" disabled aria-disabled="true" title="Em breve">Escuro</button><button type="button" disabled aria-disabled="true" title="Em breve">Ativar som</button></div>
+  </div>
+
+  <main id="conteudo">
+    <!-- 01 / HERO -->
+    <section class="hero" id="topo" data-hero>
+      <div class="hero__media" data-hero-media>
+        <img src="/assets/hero.png" alt="Retrato em luz baixa, homem de óculos escuros" fetchpriority="high" />
+      </div>
+      <div class="hero__grad" data-hero-grad></div>
+
+      <header class="header" data-header>
+        <button class="header__brand" type="button" data-menu-toggle aria-controls="menu" aria-expanded="false" aria-label="Mochi Brothers — abrir menu">
+          <img class="wm-light" src="/assets/wordmark-header.svg" width="126" height="8" alt="" />
+          <img class="wm-dark" src="/assets/wordmark-dark.svg" width="162" height="13" alt="" />
+        </button>
+        <a class="header__mono" href="#topo" aria-label="Mochi Brothers — início">
+          <img src="/assets/monogram-header.svg" width="36" height="40" alt="" />
+        </a>
+        <nav class="header__nav" aria-label="Navegação">
+          <a class="pill" href="/metodo/"><span class="pill__t">MÉTODO</span></a>
+          <a class="pill" href="/cases/"><span class="pill__t">CASES</span></a>
+          <a class="pill" href="/proposta/"><span class="pill__t">PROPOSTA</span></a>
+        </nav>
+      </header>
+
+      <h1 class="hero__title" aria-label="A referência não compete. Ela é a medida.">
+        <span class="hero__line l1" data-reveal="right" aria-hidden="true">A REFERÊNCIA</span>
+        <span class="hero__line l2" data-reveal="right" aria-hidden="true">NÃO COMPETE.</span>
+        <span class="hero__line l3" data-reveal="left" aria-hidden="true">ELA É</span>
+        <span class="hero__line l4" data-reveal="left" aria-hidden="true">A MEDIDA.</span>
+      </h1>
+
+      <!-- loader (adaptação do HomeLoader da referência) -->
+      <div class="loader" data-loader aria-hidden="true">
+        <div class="loader__win" data-loader-win>
+          <img src="/assets/case-azevedo.png" alt="" />
+          <img src="/assets/case-koyfer.png" alt="" />
+          <img src="/assets/case-turbo.png" alt="" />
+          <img src="/assets/case-criativi.png" alt="" />
+          <span class="loader__logo is-a" data-loader-a>MOCHI.</span>
+          <span class="loader__logo is-b" data-loader-b>BROTHERS</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 / INTRODUÇÃO -->
+    <section class="intro" data-intro>
+      <h2 class="intro__title">
+        <span class="mask"><span class="intro__line c-brand" data-reveal-line>A ARTE DE</span></span>
+        <span class="mask"><span class="intro__line" data-reveal-line>CONSTRUIR O NATURAL</span></span>
+        <span class="mask"><span class="intro__line" data-reveal-line>COM A INTELIGÊNCIA DIGITAL.</span></span>
+      </h2>
+      <div class="intro__img" data-intro-img>
+        <img src="/assets/komainu.png" alt="Komainu, guardiões em metal — símbolo Mochi" loading="lazy" />
+      </div>
+      <p class="intro__p" data-split-descr>Enquanto os outros brigam por atenção, a referência é procurada. Escolhida antes da comparação começar.</p>
+      <p class="intro__p is-2" data-split-descr>Empresas disputam, referências dominam.</p>
+      <p class="intro__small" data-batch>only for exclusive brands. only for those who love art.</p>
+      <a class="btn intro__btn" href="#metodo" data-batch>
+        <span class="btn__label">O Método Satori</span>
+        <span class="btn__arrow"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4.16667 15.8333L15.8333 4.16667M15.8333 15.8333V4.16667H4.16667" stroke-width="1.5" stroke="currentColor"/></svg></span>
+      </a>
+    </section>
+
+    <!-- 03 / CASES EM DESTAQUE -->
+    <section class="featured" id="destaques" data-featured>
+      <div class="featured__stage" data-stage>
+
+        <div class="featured__clip" data-m-area>
+
+          <div class="slider" data-slider aria-roledescription="carrossel" aria-label="Cases em destaque">
+            <article class="slide s-azevedo" data-slide data-name="AZEVEDO BEAUTY" aria-label="1 de 4: Azevedo Beauty">
+              <img class="slide__img" src="/assets/case-azevedo.png" alt="Duas modelos em close, pele iluminada" loading="lazy" />
+              <div class="slide__letters" aria-hidden="true">
+                <span class="L" style="--t:24;--l:28">AZE</span><span class="L" style="--t:182;--l:28">VE</span><span class="L" style="--t:336;--l:28">DO</span><span class="L sm" style="--t:508;--l:28">BEAUTY</span>
+              </div>
+              <p data-tag class="slide__tag" style="color:#392a25"><span>Cuidado de</span><span>alto padrão.</span></p>
+              <a class="slide__m" href="/cases/azevedo-beauty/">
+                <span class="Lm" style="--t:110;--l:10" aria-hidden="true">AZEVE</span><span class="Lm" style="--t:255;--l:115" aria-hidden="true">DO</span><span class="Lm" style="--t:435;--l:45" aria-hidden="true">BEAUTY</span>
+                <span class="slide__m-desc" data-tag>Cuidado de alto padrão.</span>
+                <span class="slide__m-name">AZEVEDO BEAUTY</span>
+              </a>
+            </article>
+            <article class="slide s-koyfer" data-slide data-name="KOYFER" aria-label="2 de 4: Koyfer">
+              <img class="slide__img is-tall" src="/assets/case-koyfer.png" alt="Perfil masculino de óculos em luz dramática" loading="lazy" />
+              <div class="slide__letters" aria-hidden="true">
+                <span class="L" style="--t:24;--l:28">KO</span><span class="L pre" style="--t:180;--l:100">Y F</span><span class="L pre" style="--t:336;--l:28">E R</span>
+              </div>
+              <p data-tag class="slide__tag"><span>Técnica em</span><span>autoridade.</span></p>
+              <a class="slide__m" href="/cases/koyfer/">
+                <span class="Lm" style="--t:110;--l:10" aria-hidden="true">KO   Y</span><span class="Lm" style="--t:255;--l:115" aria-hidden="true">F E</span><span class="Lm" style="--t:435;--l:45" aria-hidden="true">R</span>
+                <span class="slide__m-desc" data-tag>Koyfer transforma técnica em autoridade e barbeiros em empresários.</span>
+                <span class="slide__m-name">KOYFER</span>
+              </a>
+            </article>
+            <article class="slide s-turbo" data-slide data-name="TURBO TINTAS" aria-label="3 de 4: Turbo Tintas">
+              <img class="slide__img" src="/assets/case-turbo.png" alt="Crianças brincando com tinta na sala" loading="lazy" />
+              <div class="slide__letters is-152" aria-hidden="true">
+                <span class="L" style="--t:24;--l:28">TUR</span><span class="L" style="--t:170;--l:100">BO</span><span class="L" style="--t:316;--l:28">TIN</span><span class="L" style="--t:462;--l:100">TAS</span>
+              </div>
+              <p data-tag class="slide__tag is-turbo"><span>Toda conquista</span><span>merece uma cor.</span></p>
+              <a class="slide__m" href="/cases/turbo-tintas/">
+                <span class="Lm" style="--t:110;--l:10" aria-hidden="true">TUR  BO</span><span class="Lm" style="--t:255;--l:115" aria-hidden="true">TIN</span><span class="Lm" style="--t:435;--l:45" aria-hidden="true">TAS</span>
+                <span class="slide__m-desc" data-tag>Toda conquista merece uma cor.</span>
+                <span class="slide__m-name">TURBO TINTAS</span>
+              </a>
+            </article>
+            <article class="slide s-criativi" data-slide data-name="CRIATIVI CONCEPT" aria-label="4 de 4: Criativi Concept">
+              <img class="slide__img" src="/assets/case-criativi.png" alt="Interior minimalista com poltrona e aparador" loading="lazy" />
+              <div class="slide__letters is-diff" aria-hidden="true">
+                <span class="L" style="--t:24;--l:28">CRI</span><span class="L" style="--t:180;--l:100">ATI</span><span class="L" style="--t:336;--l:28">VI</span>
+              </div>
+              <p data-tag class="slide__tag is-criativi" style="color:#1c1c1a"><span>Um jeito</span><span>de viver.</span></p>
+              <a class="slide__m" href="/cases/criativi-concept/">
+                <span class="Lm" style="--t:110;--l:10" aria-hidden="true">CRI</span><span class="Lm" style="--t:255;--l:115" aria-hidden="true">ATI</span><span class="Lm" style="--t:435;--l:45" aria-hidden="true">VI</span>
+                <span class="slide__m-desc" data-tag>Um jeito de viver.</span>
+                <span class="slide__m-name">CRIATIVI CONCEPT</span>
+              </a>
+            </article>
+
+            <div class="slider__grad" aria-hidden="true"></div>
+            <div class="slider__nav" data-slider-nav>
+              <p class="sn-label">CASES EM DESTAQUE</p>
+              <a class="sn-all" href="/cases/">TODOS OS CASES →</a>
+              <p class="sn-count" aria-live="polite"><span data-slide-active>1</span> / <span>4</span></p>
+              <div class="sn-dots" role="tablist" aria-label="Escolher case">
+                <button class="dot is-active" role="tab" aria-selected="true" aria-label="Azevedo Beauty"></button>
+                <button class="dot" role="tab" aria-selected="false" aria-label="Koyfer"></button>
+                <button class="dot" role="tab" aria-selected="false" aria-label="Turbo Tintas"></button>
+                <button class="dot" role="tab" aria-selected="false" aria-label="Criativi Concept"></button>
+              </div>
+              <div class="sn-proj"><p class="sn-proj__k">PROJETO</p>
+                <div class="sn-proj__mask"><ul class="sn-proj__list" data-clients><li>AZEVEDO BEAUTY</li><li>KOYFER</li><li>TURBO TINTAS</li><li>CRIATIVI CONCEPT</li></ul></div>
+              </div>
+              <a class="btn btn--light sn-cta" href="/cases/azevedo-beauty/" data-slider-cta>
+                <span class="btn__label">EXPLORAR</span>
+                <span class="btn__arrow"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4.16667 15.8333L15.8333 4.16667M15.8333 15.8333V4.16667H4.16667" stroke-width="1.5" stroke="currentColor"/></svg></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 / CASES E JORNADA -->
+    <section class="work" id="cases" data-work>
+      <div class="work__poster-track" aria-hidden="true">
+        <div class="work__poster" data-work-poster>
+          <img class="work__poster-img" src="/assets/cases-poster.png" alt="" loading="lazy" data-poster-img />
+          <img class="work__poster-mono" src="/assets/cases-mono.svg" width="176" height="126" alt="" />
+        </div>
+      </div>
+      <ol class="wl" aria-label="Cases e jornada">
+        <li class="wl__item" data-work-item data-poster="/assets/case-koyfer.png" data-no-mono style="--top:94.69;--left:332;--ntop:-44.69;--nleft:-35;--fsm:45.4;--i:0;--fs:108;--ls:-5.4">
+          <a href="/cases/koyfer/" data-work-inner><span class="wl__n" aria-hidden="true">01</span><span class="wl__t">KOYFER</span></a>
+        </li>
+        <li class="wl__item" data-work-item data-poster="/assets/case-criativi.png" data-no-mono style="--top:203.69;--left:422;--ntop:-44.69;--nleft:-35;--fsm:39.9;--i:1;--fs:108;--ls:-5.4">
+          <a href="/cases/criativi-concept/" data-work-inner><span class="wl__n" aria-hidden="true">02</span><span class="wl__t">CRIATIVI CONCEPT</span></a>
+        </li>
+        <li class="wl__item" data-work-item data-poster="/assets/case-azevedo.png" data-no-mono style="--top:312.69;--left:444;--ntop:-44.69;--nleft:-35;--fsm:38.8;--i:2;--fs:102.6;--ls:-5.13">
+          <a href="/cases/azevedo-beauty/" data-work-inner><span class="wl__n" aria-hidden="true">03</span><span class="wl__t">AZEVEDO BEAUTY</span></a>
+        </li>
+        <li class="wl__item" data-work-item data-poster="/assets/case-turbo.png" data-no-mono style="--top:421.69;--left:382;--ntop:-44.69;--nleft:-35;--fsm:45.4;--i:3;--fs:108;--ls:-5.4">
+          <a href="/cases/turbo-tintas/" data-work-inner><span class="wl__n" aria-hidden="true">04</span><span class="wl__t">TURBO TINTAS</span></a>
+        </li>
+        <li class="wl__item" data-work-item data-poster="/assets/cases-poster.png" style="--top:530.69;--left:387;--ntop:-44.690000000000055;--nleft:-35;--fsm:45.4;--i:4;--fs:108;--ls:-5.4">
+          <a href="/metodo/" data-work-inner><span class="wl__n" aria-hidden="true">05</span><span class="wl__t">DESPERTAR</span></a>
+        </li>
+        <li class="wl__item" data-work-item data-poster="/assets/cases-poster.png" style="--top:639.69;--left:524;--ntop:50.0;--nleft:-38;--fsm:45.4;--i:5;--fs:108;--ls:-5.4">
+          <a href="/metodo/" data-work-inner><span class="wl__n" aria-hidden="true">06</span><span class="wl__t">REVELAÇÃO</span></a>
+        </li>
+        <li class="wl__item" data-work-item data-poster="/assets/cases-poster.png" style="--top:748.69;--left:327;--ntop:-44.690000000000055;--nleft:-35;--fsm:45.4;--i:6;--fs:108;--ls:-5.4">
+          <a href="/metodo/" data-work-inner><span class="wl__n" aria-hidden="true">07</span><span class="wl__t">MANIFESTAÇÃO</span></a>
+        </li>
+        <li class="wl__item" data-work-item data-poster="/assets/cases-poster.png" style="--top:857.69;--left:417;--ntop:-44.690000000000055;--nleft:-35;--fsm:42.5;--i:7;--fs:101.108;--ls:-5.0554">
+          <a href="/metodo/" data-work-inner><span class="wl__n" aria-hidden="true">08</span><span class="wl__t">PERMANÊNCIA</span></a>
+        </li>
+        <li class="wl__item" data-work-item data-poster="/assets/cases-poster.png" style="--top:966.69;--left:362;--ntop:-44.690000000000055;--nleft:-35;--fsm:42.3;--i:8;--fs:102.562;--ls:-5.1281">
+          <a href="/metodo/" data-work-inner><span class="wl__n" aria-hidden="true">09</span><span class="wl__t">MÉTODO SATORI</span></a>
+        </li>
+        <li class="wl__item" data-work-item data-poster="/assets/cases-poster.png" style="--top:1075.69;--left:524;--ntop:-44.690000000000055;--nleft:-35;--fsm:45.4;--i:9;--fs:108;--ls:-5.4">
+          <a href="/proposta/" data-work-inner><span class="wl__n" aria-hidden="true">10</span><span class="wl__t">SUA PROPOSTA</span></a>
+        </li>
+      </ol>
+      <p class="work__foot">CASES · MÉTODO · PROPOSTA</p>
+      <a class="btn work__btn" href="/cases/" data-batch>
+        <span class="btn__label">Todos os cases</span>
+        <span class="btn__arrow"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4.16667 15.8333L15.8333 4.16667M15.8333 15.8333V4.16667H4.16667" stroke-width="1.5" stroke="currentColor"/></svg></span>
+      </a>
+    </section>
+
+    <!-- 05 / MÉTODO -->
+    <section class="method" id="metodo" data-method>
+      <h2 class="method__title" data-method-title>
+        <span class="mask-d"><span class="mt l1">PERCEPÇÃO.</span></span>
+        <span class="mask-d"><span class="mt l2">POSICIONAMENTO.</span></span>
+        <span class="mask-d"><span class="mt l3">DOMÍNIO.</span></span>
+      </h2>
+      <div class="carousel" data-carousel tabindex="0" aria-roledescription="carrossel" aria-label="Etapas do Método Satori — arraste ou use as setas">
+        <div class="carousel__track" data-carousel-track>
+          <a class="card" href="#metodo" data-card>
+            <div class="card__media emb" style="--bg:#b4ad9b">
+              <div class="emb__sym"><img src="/assets/satori-despertar.svg" alt="" class="emb__animal" style="--il:30.31%;--ir:30.31%" /><span class="emb__name">DESPERTAR</span></div>
+              <span class="emb__num">01</span>
+            </div>
+            <p class="card__k">01 · MÉTODO SATORI</p><p class="card__t">Despertar</p>
+          </a>
+          <a class="card" href="#metodo" data-card>
+            <div class="card__media emb" style="--bg:#2e1c15">
+              <div class="emb__sym"><img src="/assets/satori-revelacao.svg" alt="" class="emb__animal" style="--il:32.77%;--ir:32.77%" /><span class="emb__name">REVELAÇÃO</span></div>
+              <span class="emb__num is-n">02</span>
+            </div>
+            <p class="card__k">02 · MÉTODO SATORI</p><p class="card__t">Revelação</p>
+          </a>
+          <a class="card" href="#metodo" data-card>
+            <div class="card__media emb" style="--bg:#b4ad9b">
+              <div class="emb__sym"><img src="/assets/satori-manifestacao.svg" alt="" class="emb__animal" style="--il:31.44%;--ir:31.44%" /><span class="emb__name is-sm">MANIFESTAÇÃO</span></div>
+              <span class="emb__num is-n">03</span>
+            </div>
+            <p class="card__k">03 · MÉTODO SATORI</p><p class="card__t">Manifestação</p>
+          </a>
+          <a class="card" href="#metodo" data-card>
+            <div class="card__media"><img src="/assets/satori-permanencia.png" alt="Permanência — Método Satori" loading="lazy" /></div>
+            <p class="card__k">04 · MÉTODO SATORI</p><p class="card__t">Permanência</p>
+          </a>
+        </div>
+      </div>
+      <a class="btn method__btn" href="#metodo" data-batch>
+        <span class="btn__label">Conheça o método</span>
+        <span class="btn__arrow"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4.16667 15.8333L15.8333 4.16667M15.8333 15.8333V4.16667H4.16667" stroke-width="1.5" stroke="currentColor"/></svg></span>
+      </a>
+    </section>
+
+    <!-- 06 / MANIFESTO -->
+    <section class="manifesto" data-manifesto aria-label="Manifesto">
+      <div class="manifesto__media" data-manifesto-media><img src="/assets/manifesto.png" alt="Os irmãos Mochi em estúdio" loading="lazy" /></div>
+      <div class="manifesto__rows" data-manifesto-rows>
+        <p class="mr" style="--l:26;--t:80.24">A REFERÊNCIA NÃO COMPETE.</p>
+        <p class="mr" style="--l:26;--t:184.24">ELA É A MEDIDA.</p>
+        <p class="mr" style="--l:165;--t:290">EMPRESAS DISPUTAM.</p>
+        <p class="mr" style="--l:45;--t:394.24">REFERÊNCIAS DOMINAM.</p>
+        <p class="mr is-90" style="--l:45;--t:498.24">A REFERÊNCIA NÃO COMPETE.</p>
+        <p class="mr" style="--l:45;--t:602.24">ELA É A MEDIDA.</p>
+        <p class="mr" style="--l:165;--t:710">EMPRESAS DISPUTAM.</p>
+        <p class="mr" style="--l:45;--t:796.24">REFERÊNCIAS DOMINAM.</p>
+      </div>
+      <div class="manifesto__rows-m" data-manifesto-rows-m aria-hidden="true">
+        <p class="mrm" style="--l:20;--t:50">A REFERÊNCIA</p>
+        <p class="mrm" style="--l:-20;--t:123">NÃO COMPETE.</p>
+        <p class="mrm" style="--l:20;--t:196">ELA É A MEDIDA.</p>
+        <p class="mrm" style="--l:-20;--t:269">EMPRESAS</p>
+        <p class="mrm" style="--l:20;--t:342">DISPUTAM.</p>
+        <p class="mrm" style="--l:-20;--t:415">REFERÊNCIAS</p>
+        <p class="mrm" style="--l:20;--t:488">DOMINAM.</p>
+        <p class="mrm" style="--l:-20;--t:561">MÉTODO SATORI.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="contato" data-footer>
+    <div class="footer__inner" data-footer-inner>
+      <p class="f-k f-contact-k">CONTATO</p>
+      <div class="f-contact">
+        <a href="mailto:admin@mochibrothers.com">admin@mochibrothers.com</a>
+        <a href="tel:+5534988510335">+55 34 98851-0335</a>
+        <a href="https://www.instagram.com/mochibrothers" target="_blank" rel="noopener">@mochibrothers</a>
+      </div>
+      <nav class="f-nav" aria-label="Rodapé">
+        <a href="#topo">HOME</a><a href="/metodo/">MÉTODO</a><a href="/cases/">CASES</a><a href="/proposta/">PROPOSTA</a>
+      </nav>
+      <div id="proposta" class="f-cta">
+        <p class="f-k">SUA EMPRESA JÁ É BOA.</p>
+        <p class="f-cta__t">AGORA ELA VAI DOMINAR.</p>
+        <a class="btn f-btn" href="mailto:admin@mochibrothers.com?subject=Submeter%20minha%20marca">
+          <span class="btn__label">Submeter minha marca</span>
+          <span class="btn__arrow"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4.16667 15.8333L15.8333 4.16667M15.8333 15.8333V4.16667H4.16667" stroke-width="1.5" stroke="currentColor"/></svg></span>
+        </a>
+      </div>
+      <div class="f-line"></div>
+      <p class="f-small f-l">Construção do natural com a inteligência digital.</p>
+      <p class="f-small f-r">© 2026 MOCHI BROTHERS. TODOS OS DIREITOS RESERVADOS.</p>
+      <p class="f-big f-mochi" data-f-left aria-hidden="true">MOCHI</p>
+      <p class="f-big f-brothers" data-f-right aria-hidden="true">BROTHERS</p>
+      <div class="f-m-text"><p>Construção do natural</p><p>com a inteligência digital.</p><p>&nbsp;</p><p>Empresas disputam,</p><p>referências dominam.</p></div>
+      <p class="f-m-langs">EN · BR · ES · FR</p>
+      <p class="f-tag" data-f-tag><span>Empresas disputam,</span><span>referências dominam.</span></p>
+    </div>
+  </footer>
+
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
